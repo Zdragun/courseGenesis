@@ -1,0 +1,10 @@
+@use 'variables' as v;
+.load
+{
+    color:v.$warning-color; 
+}
+
+.erorr
+{
+    color:v.$danger-color;
+}
