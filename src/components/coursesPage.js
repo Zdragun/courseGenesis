@@ -12,6 +12,7 @@ const CoursesPage = () => {
   const lastIndex = currentPage * counItemPage;
   const firstIndex = lastIndex - counItemPage;
   const currentPosts = data.slice(firstIndex, lastIndex)
+  
   return (
     <div>
       <ItemList

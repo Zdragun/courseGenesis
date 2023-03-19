@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+.nav-course
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: v.$dark-color;
+    padding: 2rem 6rem;
+
+
+    .nav-course-logo
+    {
+        margin-right: 2rem;
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1{
+            font-size: v.$large-font-size;
+            text-transform: uppercase;
+            color: v.$light-color;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../scss/pagination.scss'
 const Pagination = ({totalPosts,counItemPage,setCurrentPage}) => {
     let pages = [];
     for (let i = 1; i<=Math.ceil(totalPosts/counItemPage); i++){

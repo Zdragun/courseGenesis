@@ -1,0 +1,19 @@
+@use 'variables' as v;
+
+.pagination {
+
+    button {
+        padding: 9px;
+        margin: 5px;
+        border-radius: 30px;
+        border: 0;
+        background-color: v.$primary-color;
+
+        &:hover
+        {
+           border: 1px solid blue;
+           background-color: inherit;
+        }
+    }
+
+}
