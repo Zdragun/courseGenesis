@@ -4,6 +4,7 @@ import Fetcher from '../helpers/Fetcher';
 import ItemList from './ItemList';
 import Pagination from './Pagination';
 
+
 const CoursesPage = () => {
   const { data, loading, erorr } = Fetcher("https://api.wisey.app/api/v1/core/preview-courses")
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,6 +26,7 @@ const CoursesPage = () => {
         counItemPage={counItemPage} 
         setCurrentPage={setCurrentPage}
         />
+        
         
     </div>
   )

@@ -1,54 +1,84 @@
-/* .mainContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
-    margin-bottom: 94px;
-}
 
 
-
-.mainContainer div
-{
-    height: 630px;
-    max-width: 370px;
-    border: 1px dashed gray;
-    margin-bottom: 30px;
-    text-align: center;
-   
-} */
-
-
-.mainContainer
-{
+.mainContainer {
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
-    
-    .container
-    {
+
+    .container {
         border-radius: 0.25rem;
         margin-right: 10px;
-    
+        position: relative;
         box-shadow: 0 0 5px 1px gainsboro;
         flex-basis: calc(50% - 10px);
         margin-bottom: 20px;
-       
-        img
-        {
+
+
+        img {
             width: 100%;
             object-fit: fill;
+
+
         }
 
-      
+        .lessons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            h3:last-child {
+                color: rgb(200, 177, 48);
+
+            }
+        }
     }
 }
 
-.text
-{
-    display: inline-block;
-    background-color: grey;
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+    display: none;
 }
+
+.container:hover video {
+    display: block;
+}
+
+/*smaller than 526px*/
+@media (max-width: 526px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+}
+
+/* 526px and 767px */
+@media (min-width: 526px) and (max-width: 767px) {
+    .title
+    {
+        font-size: 15px;
+    }
+
+    .lessons h3
+    {
+        font-size: 12px;
+    }
+}
+
+/* 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .title
+    {
+        font-size: 25px;
+    }
+
+    .lessons h3
+    {
+        font-size: 15px;
+    }
+}
+
+

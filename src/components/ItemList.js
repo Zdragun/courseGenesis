@@ -1,7 +1,9 @@
 import React from 'react'
 import '../scss/itemline.scss'
-import Skills from '../components/Skills'
+import Skills from '../components/Skills';
+import { Link } from 'react-router-dom';
 const ItemList = ({ loading, erorr, data }) => {
+
   return (
     <main className='mainContainer'>
       {
@@ -9,16 +11,17 @@ const ItemList = ({ loading, erorr, data }) => {
           erorr ? <h1 className='error'>Sorry the error is occurred</h1> :
             data.map((item) =>
             (
-              <div className='container' key={item.id}>
+              <div  className='container' key={item.id}>
                 <div>
                   <img src={item.previewImageLink + `/cover.webp`} alt={item.title} width="370" height="294" />
-                  
-                  <h1 style={{textAlign:'center'}}>{item.title}</h1>
-                  <h3>{item.lessonsCount}</h3>
-                  <h3>{item.rating}</h3>
-                  <h2 style={{fontWeight:400,textAlign:'center'}}>{item.meta.slug}</h2>
-                  <div className='text'>
+                  <video className="video"  width={370} height={294} muted loop controls>
+                  <source src={item.meta.courseVideoPreview.link} type="application/x-mpegURL"/>
+                  </video>
+                 <Link to={"/coursesDetails"}><h1 className='title' style={{ textAlign: 'center' }}>{item.title}</h1></Link>
                   <Skills item={item} />
+                  <div className='lessons'>
+                    <h3>Lessons: {item.lessonsCount}</h3>
+                    <h3>Rating: <span>{item.rating}</span></h3>
                   </div>
                 </div>
               </div>
